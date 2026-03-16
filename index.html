@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zephyria • Hall da Fama</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">Zephyria</p>
+        <h1>Hall da Fama de Zephyria</h1>
+        <p>
+          Crônicas dos maiores heróis e lendas da civilização mais avançada da história da humanidade, Zephyria.
+        </p>
+        <div class="hero__actions">
+          <button class="cta" data-tab-target="hall">Explorar lendas</button>
+          <button class="cta cta--alt" data-tab-target="cadastro">
+            Registrar personagem
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <nav class="tabs" aria-label="Navegação principal">
+        <button class="tab tab--active" data-tab="hall">Hall de Zephyria</button>
+        <button class="tab" data-tab="cadastro">Cadastro</button>
+      </nav>
+
+      <section class="panel panel--active" id="hall" aria-label="Carrossel de personagens">
+        <div class="section-title">
+          <h2>Lendas em destaque</h2>
+          <p>Avance pelos cards para conhecer cada história.</p>
+        </div>
+
+        <div class="carousel" data-carousel>
+          <button class="carousel__btn" data-action="prev" aria-label="Personagem anterior">
+            ‹
+          </button>
+
+          <div class="carousel__viewport">
+            <div class="carousel__track" data-track></div>
+          </div>
+
+          <button class="carousel__btn" data-action="next" aria-label="Próximo personagem">
+            ›
+          </button>
+        </div>
+
+        <div class="carousel__dots" data-dots></div>
+      </section>
+
+      <section class="panel" id="cadastro" aria-label="Cadastro de personagens">
+        <div class="section-title">
+          <h2>Adicionar nova lenda</h2>
+          <p>Inclua um novo personagem para eternizar no Hall de Zephyria.</p>
+        </div>
+
+        <form id="character-form" class="character-form">
+          <label>
+            Nome da lenda
+            <input type="text" name="name" required maxlength="60" />
+          </label>
+
+          <label>
+            Reino / universo
+            <input type="text" name="universe" required maxlength="80" />
+          </label>
+
+          <label>
+            URL do retrato
+            <input type="url" name="image" required placeholder="https://..." />
+          </label>
+
+          <label>
+            História
+            <textarea
+              name="story"
+              required
+              minlength="25"
+              maxlength="900"
+              rows="6"
+            ></textarea>
+          </label>
+
+          <button type="submit">Salvar no Hall</button>
+          <p id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Zephyria • Hall da Fama • Node.js + HTML + CSS + JavaScript</p>
+    </footer>
+
+    <script src="JS/script.js"></script>
+  </body>
+</html>
