@@ -60,5 +60,5 @@ Each new character submitted through the form is added to this list.
 This project was developed to practice important web development concepts such as:
 creating interactive interfaces building and consuming APIs handling JSON data files connecting frontend and backend systems. It also explores a fictional universe called Zephyria, where characters can be recorded in a digital Hall of Fame.
 
-Author
+# Author
 Vinícius Gonçalo
